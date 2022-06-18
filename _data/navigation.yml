@@ -1,0 +1,72 @@
+# If you want to link only specific pages in your header, add the path to the
+# pages in order as they should show up.
+main:
+  - title: "Home"
+    url: /
+  - title: "GitHub"
+    url: https://github.com/sydasif
+  - title: "Tags"
+    url: /tags/  
+  - title: "Links"
+    url: /links/  
+  - title: "About"
+    url: /about/
+
+
+docs:
+  - title: "Home"
+    url: /
+  - title: "Ansible Automation"
+    children:
+      - title: "Ansible for Network Automation"
+        url: /ansible/ansible-introduction/
+      - title: "Getting Started with Ansible"
+        url: /ansible/ansible-basic/
+      - title: "Ansible Automation Lab with GNS3"
+        url: /ansible/ansible-lab-in-gns3/
+      - title: "Ansible Configuration and Inventory Setting"
+        url: /ansible/ansible-configuration/
+      - title: "Ansible YAML Inventory Setting"
+        url: /ansible/ansible-inv-yml/                      
+      - title: "Ansible Multi version Installation"
+        url: /ansible/ansible-python-venv/
+
+  - title: "Linux Networking"
+    children:
+      - title: "Linux Networking Commands"
+        url: /linux/linux-networking-cmd/
+      - title: "Tap interface in Ubuntu Linux to connect GNS3"
+        url: /linux/tap-int-in-linux/
+
+  - title: "Computer Networking"
+    children:
+      - title: "Networking Essential"
+        url: /networking/network-essential/
+      - title: "Introduction to TCP/IP"
+        url: /networking/intro-to-tcp-ip
+      - title: "Ethernet Fundamentals"
+        url: /networking/ethernet-fundamentals/    
+      - title: "Open Shortest Path First"
+        url: /networking/ospf/
+
+  - title: "Python Automation"
+    children:
+      - title: "Network Automation lab in GNS3"
+        url: /python/network-automation-gns3/
+      - title: "Network Automation Lab with Netmiko"
+        url: /python/python-netmiko/  
+      - title: "Python Virtual Environments"
+        url: /python/python-virtual-env/
+              
+  - title: "Miscellaneous"
+    children:
+      - title: "How to enable legacy SSH Algorithm and Cipher"
+        url: /misc/legacy-ssh-algorithm/
+      - title: "Getting Started with Vagrant"
+        url: /misc/vagrant/
+      - title: "Git and GitHub"
+        url: /misc/git-github/
+      - title: "Vim Editor Guide"
+        url: /misc/vim-guide/
+      - title: "Vim setting for Python and YAML"
+        url: /misc/vim-for-python-and-ymal/

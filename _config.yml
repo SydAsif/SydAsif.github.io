@@ -1,0 +1,78 @@
+remote_theme: "mmistakes/minimal-mistakes@4.19.3"
+
+minimal_mistakes_skin: "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-archives
+
+permalink: /:categories/:title/
+paginate: 7 # amount of posts to show
+paginate_path: /page:num/
+timezone: Asia/Karachi
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      # excerpt: true
+      sidebar:
+        nav: "docs"
+
+title: "Network Technician"
+name: "Syed Asif"
+url: "https://sydasif.github.io"
+baseurl: ""
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "syd"
+
+search: true
+
+author:
+  name: "Syed Asif"
+  avatar: "/assets/images/photo_id_syd_01.jpg"
+  bio: "Computer Networking and Network Automation." # Note: Markdown is allowed
+  location: "Pakistan"
+  links:
+    - label: "Personal Channel"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.youtube.com/channel/UC56G34p29vHXIaAmvz5mriQ"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/SydAsif78"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/sydasif"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/sydasif"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+incremental: false      
+      
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/

@@ -1,0 +1,23 @@
+---
+---
+
+@charset "utf-8";
+$link-color: black;
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+html {
+  font-size: 15px; // change to whatever
+
+  @include breakpoint($medium) {
+    font-size: 15px; // change to whatever
+  }
+
+  @include breakpoint($large) {
+    font-size: 17px; // change to whatever
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18.5px; // change to whatever
+  }
+}
