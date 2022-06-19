@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Python Installation"
+title:  "Python, Pip and Help function"
 date:   2022-06-19 11:02:15 +0500
 categories: python
 tag: python
@@ -166,4 +166,5 @@ DESCRIPTION
 ```
 
 [PythonIDE](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
+
 [PythonEditor](https://wiki.python.org/moin/PythonEditors)
