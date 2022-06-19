@@ -57,7 +57,8 @@ docs:
         url: /python/python-netmiko/  
       - title: "Python Virtual Environments"
         url: /python/python-virtual-env/
-              
+      - title: "Python Installation"
+        url: /python/python-installation/              
   - title: "Miscellaneous"
     children:
       - title: "How to enable legacy SSH Algorithm and Cipher"
