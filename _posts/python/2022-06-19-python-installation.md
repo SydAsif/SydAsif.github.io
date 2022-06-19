@@ -10,7 +10,6 @@ toc_sticky: true
 ---
 
 ## [What is python?](https://wiki.python.org/moin/BeginnersGuide/Overview)
-
 Python is a clear and powerful object-oriented programming language, comparable to Perl, Ruby, Scheme, or Java.
 
 ### Some of Python's notable features
