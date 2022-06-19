@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Python Installation"
-date:   2022-06-19 15:02:15 +0500
+date:   2022-06-19 11:02:15 +0500
 categories: python
 tag: python
 toc: true
