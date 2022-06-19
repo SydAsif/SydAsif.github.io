@@ -57,7 +57,7 @@ docs:
         url: /python/python-netmiko/  
       - title: "Python Virtual Environments"
         url: /python/python-virtual-env/
-      - title: "Python Installation"
+      - title: "Python, Pip and Help function"
         url: /python/python-installation/              
   - title: "Miscellaneous"
     children:
