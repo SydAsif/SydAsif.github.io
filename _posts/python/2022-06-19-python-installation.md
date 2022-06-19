@@ -30,7 +30,7 @@ Python is a clear and powerful object-oriented programming language, comparable 
 - The language supports raising and catching exceptions, resulting in cleaner error handling.
 - Python contains advanced programming features such as generators and list comprehensions.
 
-### [Downloading Python](https://wiki.python.org/moin/BeginnersGuide/Download)
+## [Downloading Python](https://wiki.python.org/moin/BeginnersGuide/Download)
 
 Before you start, you will need Python on your computer.
 
@@ -46,11 +46,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 If you need to install Python, you may as well download the most recent stable version. This is the one with the highest number that isn't marked as an alpha or beta release. Please see the [Python downloads page](https://www.python.org/downloads/) for the most up to date versions of Python. They are available via the yellow download buttons on that page.
 
-### [What is pip?](https://pypi.org/project/pip/)
+## [What is pip?](https://pypi.org/project/pip/)
 
 Pip is the package installer for Python. You can use pip to install packages from the Python Package Index and other indexes.
 
-#### [Installation](https://pip.pypa.io/en/stable/installation/)
+### [Installation](https://pip.pypa.io/en/stable/installation/)
 
 Usually, pip is automatically installed if you are:
 
@@ -69,7 +69,7 @@ If your Python environment does not have pip installed, there are 2 mechanisms t
 
 Depending on how you installed Python, there might be other mechanisms available to you for installing pip such as using [Linux package managers](https://packaging.python.org/en/latest/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers).
 
-#### [Debian/Ubuntu](https://packaging.python.org/en/latest/guides/installing-using-linux-tools/#id7)
+### [Debian/Ubuntu](https://packaging.python.org/en/latest/guides/installing-using-linux-tools/#id7)
 
 On Ubuntu it's come pre-installed if not install with below command:
 
@@ -78,7 +78,27 @@ sudo apt update
 sudo apt install python3-venv python3-pip
 ```
 
-### Help function in Python
+> To check install modules via pip use `pip list` and to check pip version use `pip --version` commands.
+
+## [Installing Python Modules](https://docs.python.org/3.8/installing/index.html)
+
+As a popular open source development project, Python has an active supporting community of contributors and users that also make their software available for other Python developers to use under open source license terms. Pip is the preferred installer program. Starting with Python 3.4, it is included by default with the Python binary installers.
+
+### Basic usage
+
+The following command will install the latest version of a module and its dependencies from the Python Packaging Index.
+
+`python3 -m pip install SomePackage`
+
+It’s also possible to specify an exact or minimum version directly on the command line, the package name and the version.
+
+`python -m pip install SomePackage==1.0.4    # specific version`
+
+Upgrading existing modules or pip must be requested explicitly.
+
+ `python3 -m pip install --upgrade SomePackage`
+
+## Help function in Python
 
 The Python help function is used to display the documentation of modules, functions, classes, keywords, etc.
 
