@@ -4,7 +4,7 @@ title:  "Part 04: Ansible Configuration and Inventory Setting"
 date:   2022-06-15 14:05:00 +0500
 categories: ansible
 tags:
-  - ansible
+  - automation
   - gns3
 toc: true
 toc_label: "On This Post"

@@ -4,7 +4,7 @@ title:  "Part 03: Ansible Automation with GNS3"
 date:   2022-06-11 08:14:00 +0500
 categories: ansible
 tags:
-  - ansible
+  - automation
   - gns3
 toc: true
 toc_label: "On This Post"

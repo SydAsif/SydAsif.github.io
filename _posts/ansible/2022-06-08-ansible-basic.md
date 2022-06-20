@@ -3,7 +3,7 @@ layout: single
 title:  "Part 02: Getting Started with Ansible"
 date:   2022-06-08 08:14:00 +0500
 categories: ansible
-tag: ansible
+tag: automation
 toc: true
 toc_label: "On This Post"
 toc_sticky: true

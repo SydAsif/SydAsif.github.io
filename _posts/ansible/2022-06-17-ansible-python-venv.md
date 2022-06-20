@@ -4,8 +4,7 @@ title:  "Part 06: Ansible Multi version Installation"
 date:   2022-06-17 09:55:00 +0500
 categories: ansible
 tags:
-  - ansible
-  - python
+  - automation
 toc: true
 toc_label: "On This Post"
 toc_sticky: true

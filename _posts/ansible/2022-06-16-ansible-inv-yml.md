@@ -4,7 +4,7 @@ title:  "Part 05: Ansible YAML Inventory Setting"
 date:   2022-06-16 09:55:00 +0500
 categories: ansible
 tags:
-  - ansible
+  - automation
   - yaml
 toc: true
 toc_label: "On This Post"
