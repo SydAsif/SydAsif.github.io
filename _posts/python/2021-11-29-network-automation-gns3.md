@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "Network Automation lab in GNS3"
-date:   2020-09-29 15:02:15 +0500
+title:  "Part 03: Network Automation lab in GNS3"
+date:   2021-11-29 15:02:15 +0500
 categories: python
 tags: 
   - automation

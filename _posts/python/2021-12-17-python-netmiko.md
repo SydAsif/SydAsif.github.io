@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "Network Automation Lab with Netmiko"
-date:   2021-09-17 15:02:15 +0500
+title:  "Part 04: Network Automation Lab with Netmiko"
+date:   2021-12-17 15:02:15 +0500
 categories: python
 tags: 
   - automation

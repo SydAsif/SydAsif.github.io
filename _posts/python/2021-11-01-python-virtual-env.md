@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Python Virtual Environments"
+title:  "Part 02: Python Virtual Environments"
 date:   2021-11-01 15:02:15 +0500
 categories: python
 tag: python
