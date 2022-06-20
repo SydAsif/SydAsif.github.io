@@ -51,13 +51,13 @@ docs:
 
   - title: "Python Automation"
     children:
-      - title: "Part 01: Python Installation, Pip and Help function"
+      - title: "Python Installation, Pip and Help function"
         url: /python/python-installation/ 
-      - title: "Part 02: Python Virtual Environments"
+      - title: "Python Virtual Environments"
         url: /python/python-virtual-env/
-      - title: "Part 03: Network Automation lab in GNS3"
+      - title: "Network Automation lab in GNS3"
         url: /python/network-automation-gns3/
-      - title: "Part 04: Network Automation Lab with Netmiko"
+      - title: "Network Automation Lab with Netmiko"
         url: /python/python-netmiko/  
 
              
