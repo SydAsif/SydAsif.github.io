@@ -22,7 +22,7 @@ docs:
         url: /ansible/ansible-introduction/
       - title: "Getting Started with Ansible"
         url: /ansible/ansible-basic/
-      - title: "Ansible Automation Lab with GNS3"
+      - title: "Ansible Automation Lab Setup with GNS3"
         url: /ansible/ansible-lab-in-gns3/
       - title: "Ansible Configuration and Inventory Setting"
         url: /ansible/ansible-configuration/
@@ -49,15 +49,15 @@ docs:
       - title: "Open Shortest Path First"
         url: /networking/ospf/
 
-  - title: "Python Automation"
+  - title: "Python & Python Automation"
     children:
       - title: "Python Installation, Pip and Help function"
         url: /python/python-installation/ 
       - title: "Python Virtual Environments"
         url: /python/python-virtual-env/
-      - title: "Network Automation lab in GNS3"
+      - title: "Network Automation with Telnetlib"
         url: /python/network-automation-gns3/
-      - title: "Network Automation Lab with Netmiko"
+      - title: "Network Automation with Netmiko"
         url: /python/python-netmiko/  
 
              

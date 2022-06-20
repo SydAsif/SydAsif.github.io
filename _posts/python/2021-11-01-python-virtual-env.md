@@ -3,7 +3,7 @@ layout: single
 title:  "Part 02: Python Virtual Environments"
 date:   2021-11-01 15:02:15 +0500
 categories: python
-tag: automation
+tag: python
 toc: true
 toc_label: "On This Post"
 toc_sticky: true

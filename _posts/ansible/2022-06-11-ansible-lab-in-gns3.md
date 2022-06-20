@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Part 03: Ansible Automation with GNS3"
+title:  "Part 03: Ansible Automation Lab Setup with GNS3"
 date:   2022-06-11 08:14:00 +0500
 categories: ansible
 tags:
@@ -16,7 +16,7 @@ GNS3 is used by hundreds of thousands of network engineers worldwide to emulate,
 
 GNS3 is open source, free software that you can download from <http://gns3.com>
 
-## Quick Start Requirments
+## Quick Start Requirements
 
 [Install GNS3](https://www.youtube.com/watch?v=Ibe3hgP8gCA&t=4s) if you don't have it and [VMware or virtual box](https://www.youtube.com/watch?v=A0DEnMi09LY&t=11s).
 
@@ -28,7 +28,7 @@ GNS3 is open source, free software that you can download from <http://gns3.com>
 
 ### Ansible Lab Configuration
 
-In above lab there is an Network-automation node with 02 network interface cards on our network with Ansible already installed. I have to point out that I have removed Ansible in the automation machine and [installed Ansible 2.9.9 with pip3](https://sydasif.github.io/ansible/ansible-basic/), sshpass and changed IP Address configurations as shown below:
+In above lab there is an Network-automation node with 02 network interface cards on our network with Ansible already installed. I have to point out that I have removed Ansible in the automation machine and [installed Ansible 2.9.9 with pip3](https://sydasif.github.io/ansible/ansible-basic/), _sshpass_ and changed IP Address configurations as shown below:
 
 ```console
 # Static config for eth0

@@ -3,7 +3,7 @@ layout: single
 title:  "Part 01: Python Installation, Pip and Help function"
 date:   2021-06-19 11:02:15 +0500
 categories: python
-tag: automation
+tag: python
 toc: true
 toc_label: "On This Post"
 toc_sticky: true

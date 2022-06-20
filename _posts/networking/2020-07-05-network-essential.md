@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Networknig Enssential"
+title:  "Networking Essential"
 date:   2020-07-05 15:02:15 +0500
 categories: networking
 tag: 

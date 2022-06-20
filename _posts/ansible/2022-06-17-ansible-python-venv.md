@@ -15,7 +15,7 @@ This is a module shipped by Python3 to create a virtual environment, it creates 
 
 Also it provide leverage to test newer Ansible release for compatibility, without need to upgrade the actual Ansible setup.
 
-## What is virtual enviroment or venv ?
+## What is virtual environment or venv ?
 
 These are python tools/modules used for creating lightweight “virtual environments”. Each virtual environment has its own Python binary (which matches the version of the binary that was used to create this environment) and can have its own independent set of installed Python packages in its site directories.
 
@@ -54,4 +54,4 @@ pip3 install ansible==2.7
 deactivate
 ```
 
-Deactivate virtual enviroment and repeat the same commands to deploy the ansible 2.9 version.
+Deactivate virtual environment and repeat the same commands to deploy the ansible 2.9 version.

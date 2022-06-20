@@ -20,9 +20,9 @@ This blog focuses on:
 
 Git can:
 
-- track changes in ﬁles;
-- store multiple versions of the same ﬁle;
-- cancel changes made;
+- track changes in ﬁle
+- store multiple versions of the same ﬁle
+- cancel changes made
 - record who made changes and when.
 
 Git was developed in 2005 to maintain all data, history, file revisions, etc locally. Every user has a copy of their own entire clone repository and allows each node to be a full clone of the entire historical record, not on the main server.
@@ -61,7 +61,7 @@ git config --list
 
 There are two ways to initialize a repository, the first one is to clone an existing repository from a server (GitHub) to your local machine.
 
-The second is to create a new repository on your machine localy.
+The second is to create a new repository on your machine locally.
 
 ## Fundamentals of Git
 
@@ -92,7 +92,7 @@ Files in Git follow a life cycle as below:
 
 ### File .gitignore
 
-Git has the option to specify which ﬁles or directories to ignore. To do this, you need to create appropriate templates in the .gitignore ﬁle in the repository directory. To make Git ignore, you can add such a file name to .gitignore ﬁle.
+Git has the option to specify which ﬁle or directories to ignore. To do this, you need to create appropriate templates in the .gitignore ﬁle in the repository directory. To make Git ignore, you can add such a file name to .gitignore ﬁle.
 
 ### git init
 
@@ -136,13 +136,13 @@ rename a git tracked file
 
 ### git diﬀ
 
-Command _git diff_ allows you to see the diﬀerence between diﬀerent states in the working area. Command _git diff_ shows what changes have been made since the last commit. If you add changes made to the staging area via _git add_ command and run _git diff_ again, it will show nothing.
+Command _git diff_ allows you to see the difference between different states in the working area. Command _git diff_ shows what changes have been made since the last commit. If you add changes made to the staging area via _git add_ command and run _git diff_ again, it will show nothing.
 
 ```console
 git diff
 ```
 
-To show the diﬀerence between staging and last commit, add the parameter --staged.
+To show the difference between staging and last commit, add the parameter --staged.
 
 ### Repository History
 
@@ -234,7 +234,7 @@ To add a key you have to copy it. For example, you can display a key with a cat 
 cat ~/.ssh/id_rsa.pub
 ```
 
-After copying, go to GitHub, in the upper right-hand corner click on the picture of your proﬁle and select “Settings” in the drop-down list. In list on the left, select “SSH and GPG keys”. Then press “New SSH key” and in, “Title” ﬁeld write key name (for example “my_laptop”) and in ﬁeld “Key” insert the content that was copied from ﬁle ~/. ssh/id_rsa.pub.
+After copying, go to GitHub, in the upper right-hand corner click on the picture of your pro-ﬁle and select “Settings” in the drop-down list. In list on the left, select “SSH and GPG keys”. Then press “New SSH key” and in, “Title” ﬁeld write key name (for example “my_laptop”) and in ﬁeld “Key” insert the content that was copied from ﬁle ~/. ssh/id_rsa.pub.
 
 To check if everything has been successful, try executing the command ```ssh -T git@Github.com```.
 
@@ -294,7 +294,7 @@ will appear. Now you have a complete local Git repository where you can work. Ty
 
 - Before starting, synchronize local content with GitHub using git pull command
 - Modifying repository ﬁles
-- Adding modiﬁed ﬁles to staging with “git add” command
+- Adding modified ﬁles to staging with “git add” command
 - Commit changes using git commit command
 - Transferring local changes to GitHub repository with git push command
 
