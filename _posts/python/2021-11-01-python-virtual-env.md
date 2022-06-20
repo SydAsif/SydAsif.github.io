@@ -3,7 +3,7 @@ layout: single
 title:  "Part 02: Python Virtual Environments"
 date:   2021-11-01 15:02:15 +0500
 categories: python
-tag: python
+tag: automation
 toc: true
 toc_label: "On This Post"
 toc_sticky: true
@@ -52,4 +52,28 @@ Once installed, you can create a virtual environment using your terminal or cmd.
 virtualenv <FOLDER_NAME>
 ```
 
-Activating and deactivating the virtual environment works exactly as it did when you created a virtual environment using Python’s venv module.
+## Pin Your Dependencies
+
+To make your virtual environments reproducible, you may need its contents. To do this is by creating _requirements.txt_ file while your virtual environment is active.
+
+`python -m pip freeze > requirements.txt`
+
+After working/deleting your _venv_ folder you can create same environment with requirements.txt file.
+
+```console
+virtualenv new-venv
+source new-venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+## Creating virtual environment for specific version
+
+To create a specific version environment use below command:
+
+`virtualenv -p python3.7 venv`
+
+This will not work in virtual environment using Python’s _venv_ module.
+
+Activating, deactivating and freezing, works exactly as virtual environment using Python’s _venv_ module.
+
+[Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/)
