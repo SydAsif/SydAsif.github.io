@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Part 02: Python Network Automation with Netmiko"
+title:  "Python Network Automation with Netmiko"
 date:   2021-12-17 15:02:15 +0500
 categories: python
 tags: 

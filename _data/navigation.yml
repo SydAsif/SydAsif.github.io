@@ -69,7 +69,7 @@ docs:
              
   - title: "Miscellaneous"
     children:
-      - title: "Git and GitHub"
+      - title: "Git and GitHub Crash Course"
         url: /misc/git-github/
       - title: "Vim Editor Guide"
         url: /misc/vim-guide/

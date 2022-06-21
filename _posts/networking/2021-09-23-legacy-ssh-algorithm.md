@@ -3,7 +3,9 @@ layout: single
 title:  "How to enable legacy SSH Algorithm and Cipher"
 date:   2021-09-23 11:50:00 +0500
 categories: networking
-tags: cisco
+tags: 
+  - cisco
+  - gns3
 toc: true
 toc_label: "On This Post"
 toc_sticky: true
@@ -12,7 +14,7 @@ toc_sticky: true
 ## Legacy SSH Algorithm and Cipher in Cisco Device's
 In this blog, I'm showing you how to enable the legacy SSH algorithm and cipher option on your machine.
 
-I, encounter this issue so many times whenever setting [lab environment](https://syd-asif.blogspot.com/2021/09/set-up-lab-for-network-automation-in.html) for testing. I'm using Windows 10 and Microsoft loopback adaptor to connect with devices in GNS3, but this process is also working on any other setup or any Linux OS.
+I, encounter this issue so many times whenever setting lab environment for testing. I'm using [Windows 10 and Microsoft loopback adaptor to connect with devices in GNS3](https://sydasif.github.io/networking/connect-host-pc-with-gns3.md), but this process is also working on any other setup or any Linux OS.
 
 Lab Topology used in this setup as shown below:
 

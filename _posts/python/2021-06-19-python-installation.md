@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Part 01: Python Installation, Pip and Help function"
+title:  "Python Installation, Pip and Help function"
 date:   2021-06-19 11:02:15 +0500
 categories: python
 tag: python

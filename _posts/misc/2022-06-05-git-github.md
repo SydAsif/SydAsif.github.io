@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Git and GitHub"
+title:  "Git and GitHub Crash Course"
 date:   2022-06-05 15:02:15 +0500
 categories: misc
 tag: git
