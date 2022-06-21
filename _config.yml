@@ -46,17 +46,20 @@ author:
   name: "Syed Asif"
   avatar: "/assets/images/photo_id_syd_01.jpg"
   bio: "Computer Networking and Network Automation." # Note: Markdown is allowed
-  location: "Pakistan"
+  location: "North-West, Pakistan"
   links:
-    - label: "Personal Channel"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.youtube.com/channel/UC56G34p29vHXIaAmvz5mriQ"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/SydAsif78"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sydasif"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/SydAsif78"
+    - label: "Blog"
+      icon: "fas fa-fw fa-link"
+      url: "https://syd-asif.blogspot.com/"      
+    - label: "YouTube"
+      icon: "fab fa-youtube-square"
+      url: "https://www.youtube.com/channel/UC56G34p29vHXIaAmvz5mriQ"
 
 footer:
   links:
