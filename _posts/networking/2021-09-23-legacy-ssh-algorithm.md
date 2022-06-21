@@ -2,7 +2,7 @@
 layout: single
 title:  "How to enable legacy SSH Algorithm and Cipher"
 date:   2021-09-23 11:50:00 +0500
-categories: misc
+categories: networking
 tags: cisco
 toc: true
 toc_label: "On This Post"
