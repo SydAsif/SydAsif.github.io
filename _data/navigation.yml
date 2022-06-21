@@ -48,6 +48,12 @@ docs:
         url: /networking/ethernet-fundamentals/    
       - title: "Open Shortest Path First"
         url: /networking/ospf/
+      - title: "How to Connect Host(Win 10) PC with GNS3"
+        url: /networking/connect-host-pc-with-gns3/  
+      - title: "How to enable legacy SSH Algorithm and Cipher"
+        url: /networking/legacy-ssh-algorithm/
+      - title: "Getting Started with Vagrant"
+        url: /networking/vagrant/
 
   - title: "Python & Python Automation"
     children:
@@ -63,10 +69,6 @@ docs:
              
   - title: "Miscellaneous"
     children:
-      - title: "How to enable legacy SSH Algorithm and Cipher"
-        url: /misc/legacy-ssh-algorithm/
-      - title: "Getting Started with Vagrant"
-        url: /misc/vagrant/
       - title: "Git and GitHub"
         url: /misc/git-github/
       - title: "Vim Editor Guide"
