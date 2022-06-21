@@ -214,3 +214,5 @@ tn.write(b"end\n")
 tn.write(b"exit\n")
 print(tn.read_all().decode('ascii'))
 ```
+
+> More script at [GitHub](https://github.com/sydasif/network-automation/tree/master/telnet)
