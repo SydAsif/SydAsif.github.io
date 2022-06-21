@@ -1,9 +1,11 @@
 ---
 layout: single
-title:  "How to Connect Host PC with GNS3"
+title:  "How to Connect Window Host PC (Win 10) with GNS3"
 date:   2021-09-06 11:50:00 +0500
-categories: misc
-tags: cisco
+categories: networking
+tags: 
+  - cisco
+  - gns3
 toc: true
 toc_label: "On This Post"
 toc_sticky: true

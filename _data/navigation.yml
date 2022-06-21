@@ -35,7 +35,7 @@ docs:
     children:
       - title: "Linux Networking Commands"
         url: /linux/linux-networking-cmd/
-      - title: "Tap interface in Ubuntu Linux to connect GNS3"
+      - title: "How to Connect Linux Host PC (Ubuntu) with GNS3"
         url: /linux/tap-int-in-linux/
 
   - title: "Computer Networking"
@@ -48,7 +48,7 @@ docs:
         url: /networking/ethernet-fundamentals/    
       - title: "Open Shortest Path First"
         url: /networking/ospf/
-      - title: "How to Connect Host(Win 10) PC with GNS3"
+      - title: "How to Connect Window Host PC (Win 10) with GNS3"
         url: /networking/connect-host-pc-with-gns3/  
       - title: "How to enable legacy SSH Algorithm and Cipher"
         url: /networking/legacy-ssh-algorithm/

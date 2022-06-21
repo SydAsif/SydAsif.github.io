@@ -1,10 +1,11 @@
 ---
 layout: single
-title:  "Tap interface in Ubuntu Linux to connect GNS3"
+title:  "How to Connect Linux Host PC (Ubuntu) with GNS3"
 date:   2022-05-21 15:02:15 +0500
 categories: linux
 tag: 
   - gns3
+  - cisco
 toc: true
 toc_label: "On This Post"
 toc_sticky: true
