@@ -6,6 +6,7 @@ categories: python
 tags: 
   - automation
   - gns3
+  - python
 toc: true
 toc_label: "On This Post"
 toc_sticky: true

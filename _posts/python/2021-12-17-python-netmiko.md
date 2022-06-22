@@ -6,6 +6,7 @@ categories: python
 tags: 
   - automation
   - gns3
+  - python
 toc: true
 toc_label: "On This Post"
 toc_sticky: true
@@ -62,3 +63,5 @@ net_connect = ConnectHandler(**cisco_881)
 output = net_connect.send_command('show ip int brief')
 print(output)
 ```
+
+> More script at [GitHub](https://github.com/sydasif/network-automation/tree/master/netmiko)
