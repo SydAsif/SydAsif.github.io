@@ -14,7 +14,7 @@ toc_sticky: true
 ## Netmiko
 Using telnet in a lab environment for practice or in a fully isolated private network is recommended, but in a production or public network, telnet is vulnerable to cyber attack.
 
-To overcome this anomly, network engineers use ssh. SSH is a network protocol that is widely used to access and manage a device remotely and a major protocol to access the network devices and servers over the internet.
+To overcome this anomaly, network engineers use ssh. SSH is a network protocol that is widely used to access and manage a device remotely and a major protocol to access the network devices and servers over the internet.
 
 To automate networking devices via SSH, we will using Netmiko. [Netmiko](https://syd-asif.blogspot.com/2021/09/python-netmiko.html) is a multi-vendor library to simplify Paramiko SSH connections to network devices. Netmiko supports a wide range of devices. These devices fall into three categories.
 
@@ -37,31 +37,7 @@ We will use our previous topology as below:
 
 ![picture](/assets/images/network_automation.png)
 
-Configure the device for SSH as below:
-
-```terminal
-conf t
-!
-username admin pri 15 secret cisco
-enable secret cisco
-!
-no ip domain-lookup
-ip domain-name lab.com
-crypto key generate rsa modulus 2048
-!
-line con 0
- password cisco
- exec-timeout 0 0
- login
- logging synchronous
-!
-line vty 0 4
- login local
- logging synchronous
- tra in all
-!
-end
-```
+[Lab Configuration](https://sydasif.github.io/python/network-automation-gns3/#lab-configuration) same as previous.
 
 ## [Example of Netmiko](https://github.com/ktbyers/netmiko/blob/develop/EXAMPLES.md)  
 
