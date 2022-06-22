@@ -63,6 +63,8 @@ docs:
         url: /python/python-virtual-env/
       - title: "Network Automation with Telnetlib"
         url: /python/network-automation-gns3/
+      - title: "Network Automation with Paramiko"
+        url: /python/python-paramiko/        
       - title: "Network Automation with Netmiko"
         url: /python/python-netmiko/  
 
