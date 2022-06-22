@@ -121,40 +121,6 @@ tn.write(b"exit\n")
 print(tn.read_all().decode('ascii'))
 ```
 
-> Python code to configure the Hostname using telnet.
-
-```py
-import getpass
-import telnetlib
-
-# Declare a variable for storing the IP address
-IP = "192.168.X.X"
-
-# Declare a variable for storing username
-user = input("Enter your username :")
-
-# Use getpass module which we imported, to get the password from the user
-password = getpass.getpass()
-
-# Pass the IP variable value in to the telnetlib
-tn = telnetlib.Telnet(IP)
-
-# Now the code will read each output from the cisco switch 
-tn.read_until(b"Username: ")
-tn.write(user.encode("ascii") + b"\n")
-if password:
-    tn.read_until(b"Password: ")
-    tn.write(password.encode("ascii") + b"\n")
-
-tn.write(b"conf t\n")
-tn.write(b"hostname R1\n") # hostname
-tn.write(b"end\n")
-tn.write(b"write memory\n")
-tn.write(b"exit\n")
-
-print(tn.read_all().decode('ascii'))
-```
-
 > Python code to configure the router.
 
 ```python
@@ -185,34 +151,35 @@ tn.write(b"exit\n")
 print(tn.read_all().decode('ascii'))
 ```
 
-> Python code to configure the switch using telnet.
+> Python code to configure ssh using telnetlib.
 
 ```python
 import getpass
 import telnetlib
 
- 
-HOST = "192.168.X.X"
-user = input("Enter your telnet username: ")
+user = input("Welcome, if authorized \nPlease enter your telnet Username: ")
 password = getpass.getpass()
- 
-tn = telnetlib.Telnet(HOST)
-tn.read_until(b"Username: ")
-tn.write(user.encode('ascii') + b"\n")
 
-if password:
-    tn.read_until(b"Password: ")
-    tn.write(password.encode('ascii') + b"\n")
-
-tn.write(b"enable\n")
-tn.write(b"cisco\n")
-tn.write(b"conf t\n")
-for n in range(2, 10):
-    tn.write(b"vlan "+str(n).encode('ascii')+b"\n")
-    tn.write(b"name Python_VLAN_"+str(n).encode('ascii')+b"\n")
-tn.write(b"end\n")
-tn.write(b"exit\n")
-print(tn.read_all().decode('ascii'))
+for IP in range (10,12): 
+    HOST = "192.168.10." + str(IP)
+    print ('configuration of 192.168.10.' + str(IP))
+    tn = telnetlib.Telnet(HOST)
+    tn.read_until(b"Username: ")
+    tn.write(user.encode('ascii') + b"\n")
+    if password:
+        tn.read_until(b"Password: ")
+        tn.write(password.encode('ascii') + b"\n")
+   
+    tn.write(b"enable\n") 
+    tn.write(b"cisco\n")
+    tn.write(b"conf t\n")
+    tn.write(b"ip domain-name cisco.com\n")
+    tn.write(b"crypto key generate rsa modulus 1024\n\n")
+    tn.write(b"line vty 0 4\n")
+    tn.write(b"transport input ssh telnet\n")
+    tn.write(b"end\n")
+    tn.write(b"write memory\n")
+    tn.write(b"exit\n")
 ```
 
 > More script at [GitHub](https://github.com/sydasif/network-automation/tree/master/telnet)
