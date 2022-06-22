@@ -20,9 +20,41 @@ In this blog, we are going to set up Network Automation hands-on lab for Python 
 
 ## Lab Configuration
 
-First, we will assign an IP address to the network automation container through DHCP via nat node. Open console connection of container and type command `nano /etc/network/interfaces` un-commit the last two lines and save with `ctrl+s` and exit with `ctrl+x`.
+First, Aad two interface:
 
-The network automation container must be, then restart and check the IP address with `ifconfig` command. Now configure the router in the same subnet as the container network address.
+![pic](/assets/images/net_auto.png)
+
+Open console connection of container and type command `nano /etc/network/interfaces` and configure as below:
+
+```console
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 192.168.10.2
+	netmask 255.255.255.0
+#	gateway 192.168.0.1
+#	up echo nameserver 192.168.0.1 > /etc/resolv.conf
+
+# DHCP config for eth0
+#auto eth0
+#iface eth0 inet dhcp
+
+# Static config for eth1
+#auto eth1
+#iface eth1 inet static
+#	address 192.168.1.2
+#	netmask 255.255.255.0
+#	gateway 192.168.1.1
+#	up echo nameserver 192.168.1.1 > /etc/resolv.conf
+
+# DHCP config for eth1
+auto eth1
+iface eth1 inet dhcp
+```
+
+Save with `ctrl+o` and exit with `ctrl+x`.
+
+Then restart network automation, and check the IP address with `ifconfig` command. Now configure the router in the same subnet as the container network address.
 
 ### Router Configuration
 
