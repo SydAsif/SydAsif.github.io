@@ -13,29 +13,33 @@ toc_sticky: true
 Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example:
 
 ```py
->>> # Measure some strings:
-... words = ['cat', 'window', 'defenestrate']
->>> for w in words:
-...     print(w)
-...
-cat 
+In [6]: # Measure some strings:                                                 
+
+In [7]: words = ['cat', 'window', 'door']                                       
+
+In [8]: for w in words: 
+   ...:     print(w) 
+   ...:                                                                         
+cat
 window
-defenestrate
+door
 ```
 
 ## The range() Function
 
-If you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. It generates arithmetic progressions.
+If you do need to iterate over a sequence of numbers, the built-in function range() comes in handy.
 
 ```py
->>> for i in range(5):
-...     print(i)
-...
-0
-1
-2
-3
-4
+In [1]: subnet = "192.168.10."                                                  
+
+In [2]: for i in range(5): 
+   ...:     print(subnet + str(i)) 
+   ...:                                                                         
+192.168.10.0
+192.168.10.1
+192.168.10.2
+192.168.10.3
+192.168.10.4
 ```
 
 The given end point is never part of the generated sequence; range(10) generates 10 values, the legal indices for items of a sequence of length 10. It is possible to let the range start at another number, or to specify a different increment (even negative; sometimes this is called the ‘step’).
@@ -51,18 +55,20 @@ range(-10, -100, -30)
   -10, -40, -70
 ```
 
-To iterate over the indices of a sequence, you can combine range() and len() as follows:
+We can use for loop, nested as follows:
 
 ```python
->>> a = ['Mary', 'had', 'a', 'little', 'lamb']
->>> for i in range(len(a)):
-...     print(i, a[i])
-...
-0 Mary
-1 had
-2 a
-3 little
-4 lamb
+In [3]: device = ['r1', 'r2', 'r3']                                             
+
+In [4]: fqdn = ['cisco.com']                                                    
+
+In [5]: for d in device: 
+   ...:     for n in fqdn: 
+   ...:         print(d + '.' + n) 
+   ...:                                                                         
+r1.cisco.com
+r2.cisco.com
+r3.cisco.com
 ```
 
 See more on [python-doc](https://docs.python.org/3.8/tutorial/controlflow.html#for-statements).
