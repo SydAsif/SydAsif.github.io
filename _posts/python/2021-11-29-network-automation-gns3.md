@@ -19,7 +19,7 @@ In this blog, we are going to set up Network Automation hands-on lab for Python 
 
 ![picture](/assets/images/network_automation.png)
 
-## Lab Configuration
+### NetworkAutomation-1 Configuration
 
 First, Aad two interface as below:
 
