@@ -55,18 +55,23 @@ docs:
       - title: "Getting Started with Vagrant"
         url: /networking/vagrant/
 
-  - title: "Python & Python Automation"
+  - title: "Python"
     children:
       - title: "Python Installation, Pip and Help function"
         url: /python/python-installation/ 
       - title: "Python Virtual Environments"
         url: /python/python-virtual-env/
+      - title: "Python for loop"
+        url: /python/python-for-loop/ 
+
+  - title: "Python Automation"
+    children:
       - title: "Network Automation with Telnetlib"
         url: /python/network-automation-gns3/
+      - title: "Python Network Automation with Pexpect"
+        url: /python/network-automation-pexpect/  
       - title: "Network Automation with Paramiko"
-        url: /python/python-paramiko/
-      - title: "Python for loop"
-        url: /python/python-for-loop/          
+        url: /python/python-paramiko/     
       - title: "Network Automation with Netmiko"
         url: /python/python-netmiko/  
 
