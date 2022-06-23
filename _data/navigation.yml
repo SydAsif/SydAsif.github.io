@@ -68,7 +68,7 @@ docs:
     children:
       - title: "Network Automation with Telnetlib"
         url: /python/telnetlib/
-      - title: "Python Network Automation with Pexpect"
+      - title: "Network Automation with Pexpect"
         url: /python/pexpect/  
       - title: "Network Automation with Paramiko"
         url: /python/paramiko/     
