@@ -39,7 +39,7 @@ connection = paramiko.SSHClient()
 # Sets the policy that the client should use regarding keys
 connection.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 # The next few lines invoke a new interactive shell from the connection
-connection.connect('192.168.100.20', username='admin1', password='cisco1', look_for_keys=False, allow_agent=False)
+connection.connect('192.168.10.10', username='admin', password='cisco', look_for_keys=False, allow_agent=False)
 new_connection = connection.invoke_shell()
 
 # Send command to the remote device
