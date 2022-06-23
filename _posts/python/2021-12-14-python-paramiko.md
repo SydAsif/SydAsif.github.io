@@ -29,7 +29,7 @@ We will use our topology as below:
 
 ![picture](/assets/images/network_automation.png)
 
-[Lab Configuration](https://sydasif.github.io/python/network-automation-gns3/#lab-configuration) same as previous.
+[Lab Configuration](https://sydasif.github.io/python/network-automation-gns3/#networkautomation-1-configuration) same as previous.
 
 ## Example of Paramiko  
 
