@@ -67,13 +67,13 @@ docs:
   - title: "Python Automation"
     children:
       - title: "Network Automation with Telnetlib"
-        url: /python/network-automation-gns3/
+        url: /python/telnetlib/
       - title: "Python Network Automation with Pexpect"
-        url: /python/network-automation-pexpect/  
+        url: /python/pexpect/  
       - title: "Network Automation with Paramiko"
-        url: /python/python-paramiko/     
+        url: /python/paramiko/     
       - title: "Network Automation with Netmiko"
-        url: /python/python-netmiko/  
+        url: /python/netmiko/  
 
              
   - title: "Miscellaneous"
