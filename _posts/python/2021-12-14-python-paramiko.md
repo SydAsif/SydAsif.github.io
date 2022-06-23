@@ -13,6 +13,10 @@ toc_sticky: true
 ---
 
 ## Paramiko
+Using telnet in a lab environment for practice or in a fully isolated private network is recommended, but in a production or public network, telnet is vulnerable to cyber attack.
+
+To overcome this anomaly, network engineers use ssh. SSH is a network protocol that is widely used to access and manage a device remotely and a major protocol to access the network devices and servers over the internet. To configure ssh on device's see [telnetlib script](https://sydasif.github.io/python/network-automation-gns3/#ssh-configuration) in previous lab.
+
 To automate networking devices via SSH, we will using Paramiko. [Paramiko](https://www.paramiko.org/) is a pure-Python [1] (2.7, 3.4+) implementation of the SSHv2 protocol [2], providing both client and server functionality.
 
 Paramiko’s documentation <https://docs.paramiko.org/en/stable/>
