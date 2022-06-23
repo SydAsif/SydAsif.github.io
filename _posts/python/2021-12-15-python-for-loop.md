@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Python for loop"
+title:  "Python: for loop"
 date:   2021-12-15 15:02:15 +0500
 categories: python
 tag: python

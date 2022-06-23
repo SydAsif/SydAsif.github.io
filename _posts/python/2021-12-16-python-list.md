@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Python List"
+title:  "Python: List"
 date:   2021-12-16 15:02:15 +0500
 categories: python
 tag: python

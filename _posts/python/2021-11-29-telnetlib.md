@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Python Network Automation with Telnetlib"
+title:  "Python: Network Automation with Telnetlib"
 date:   2021-11-29 15:02:15 +0500
 categories: python
 tags: 
