@@ -62,7 +62,9 @@ docs:
       - title: "Python Virtual Environments"
         url: /python/python-virtual-env/
       - title: "Python for loop"
-        url: /python/python-for-loop/ 
+        url: /python/python-for-loop/
+      - title: "Python List"
+        url: /python/python-list/   
 
   - title: "Python Automation"
     children:
