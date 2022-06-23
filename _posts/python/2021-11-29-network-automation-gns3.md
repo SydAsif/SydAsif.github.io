@@ -21,7 +21,7 @@ In this blog, we are going to set up Network Automation hands-on lab for Python 
 
 ## Lab Configuration
 
-First, Aad two interface:
+First, Aad two interface as below:
 
 ![pic](/assets/images/net_auto.png)
 
@@ -63,7 +63,7 @@ Then restart network automation, and check the IP address with `ifconfig` comman
 conf t
 hostname R1
 int fa0/0
-ip address 192.168.0.71 255.255.255.0
+ip address 192.168.10.11 255.255.255.0
 no shut
 end
 ```
@@ -87,7 +87,7 @@ On switch S1, we see that only the default VLAN is configured with sh vlan and s
 
 ```console
 conf t
-host S1
+hostname S1
 enable password cisco
 username admin password cisco
 line vty 0 4
@@ -103,7 +103,7 @@ Configure the IP address on _VLAN1_
 ```console
 conf t
 int vlan 1
-ip address 192.168.0.72 255.255.255.0
+ip address 192.168.10.10 255.255.255.0
 no shut
 end
 wr
@@ -115,7 +115,7 @@ Telnet is a type of network protocol that allows a user in one computer to login
 
 The telnet command is used along with the hostname and then the user credentials are entered. Telnet sends commands and retrieves data from the remote devices in plain text, so it is recommended that not be used in the production environment.
 
-### Python3 telnetlib
+### Python telnetlib Module
 
 The _telnetlib_ is a Python module, that provides a Telnet class that implements the Telnet protocol. Python’s _telnetlib_ lets you easily automate access to Telnet servers, even from non-Unix machines. The _telnetlib_ library is already included in the python package. We don't need to install it rather just import it into our program as given below:
 
@@ -123,18 +123,18 @@ The _telnetlib_ is a Python module, that provides a Telnet class that implements
 
 Now I'm going to show you how to use _telnetlib_ with practical examples.
 
-Copy the python script from Python3 [docs](https://docs.python.org/3/library/telnetlib.html) to your PC and amend it, as per your requirement.
+Copy the python script from Python [website](https://docs.python.org/3/library/telnetlib.html) to your PC and amend it, as per your requirement.
 
 Below is the python code for achieving our task, which shows the IP interface brief. Write the code using a nano editor as exe_01.py.
 
-> A simple example to show IP interface brief.
+> A simple example to show IP interface brief on S1.
 
 ```python
 import getpass
 import telnetlib
 
 # Declare a variable for storing the IP address
-HOST = "192.168.X.X"
+HOST = "192.168.10.10"
 # Declare a variable for storing username
 user = input("Enter your Username: ")
 # Use getpass module, to get the password from the user
@@ -154,13 +154,13 @@ tn.write(b"exit\n")
 print(tn.read_all().decode('ascii'))
 ```
 
-> Python code to configure the router.
+> Python code to configure R1.
 
 ```python
 import getpass
 import telnetlib
 
-HOST = "192.168.X.X"
+HOST = "192.168.10.11"
 user = input("Enter your telnet username: ")
 password = getpass.getpass()
 
@@ -177,14 +177,14 @@ tn.write(b"cisco\n")
 tn.write(b"conf t\n")
 tn.write(b"int loop 0\n")
 tn.write(b"ip address 1.1.1.1 255.255.255.255\n")
-tn.write(b"router ospf 1\n")
-tn.write(b"network 0.0.0.0 255.255.255.255 area 0\n")
 tn.write(b"end\n")
 tn.write(b"exit\n")
 print(tn.read_all().decode('ascii'))
 ```
 
-> Python code to configure ssh using telnetlib.
+### SSH configuration
+
+Python code to configure _ssh_ using _for loop_ on S1 and R1.
 
 ```python
 import getpass
@@ -193,9 +193,11 @@ import telnetlib
 user = input("Welcome, if authorized \nPlease enter your telnet Username: ")
 password = getpass.getpass()
 
+# for loop
 for IP in range (10,12): 
     HOST = "192.168.10." + str(IP)
     print ('configuration of 192.168.10.' + str(IP))
+    
     tn = telnetlib.Telnet(HOST)
     tn.read_until(b"Username: ")
     tn.write(user.encode('ascii') + b"\n")
@@ -208,8 +210,6 @@ for IP in range (10,12):
     tn.write(b"conf t\n")
     tn.write(b"ip domain-name cisco.com\n")
     tn.write(b"crypto key generate rsa modulus 1024\n\n")
-    tn.write(b"line vty 0 4\n")
-    tn.write(b"transport input ssh telnet\n")
     tn.write(b"end\n")
     tn.write(b"write memory\n")
     tn.write(b"exit\n")
