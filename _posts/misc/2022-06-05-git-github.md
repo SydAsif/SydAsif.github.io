@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Git and GitHub Crash Course"
+title:  "Git and GitHub Getting Started"
 date:   2022-06-05 15:02:15 +0500
 categories: misc
 tag: git
@@ -69,15 +69,15 @@ Git maintains three file systems also known as git structures or trees.
 
 ### Working directory / local workspace
 
-Store source code files, binaries, images, documentation, and whatever else you need.
+Starting with the working area, the working area is where the files that are not handled by git, it is the place where all the untracked files are kept.
 
 ### Staging area / index
 
-This is an intermediary storage area for items to be synchronized.
+Staging area has files that are going to be part of the next commit.
 
 ### Local repository
 
-store all committed items.
+The repository contains all the project and store all committed items.
 
 ### Staging and Committing
 
@@ -124,6 +124,14 @@ After all necessary ﬁles have been added to a staging area, you can commit cha
 git commit -m "your commit msg" 
 ```
 
+### git show
+
+The git show command will help to see details of a particular commit.
+
+```console
+git show 1c16945
+```
+
 ### git rm
 
 delete a git tracked file from a repository
@@ -142,13 +150,51 @@ Command _git diff_ allows you to see the difference between different states in 
 git diff
 ```
 
-To show the difference between staging and last commit, add the parameter --staged.
+The `git diff` command is to see the difference between different commits.
+
+```console
+git diff 1c16945..9dcff6
+```
+
+To show the difference between staging and last commit, add the parameter:
+
+```console
+git diff --staged
+```
 
 ### Repository History
 
 - The _git log_ command shows a history of the repository in descending order, with the last commit we made at the top.
 - The _git log_ command displays a brief description of a repository, it includes the change, date and time, who made the changes, commit message and commit identifier (hash value).
 - You can tidy this history with the _git log --oneline_ command, which shows a clean-cut history.
+
+There are many ways to see commit history :
+
+Most basic one: Shows all the commits from end to start, with all the info related to commits.
+
+```console
+git log
+```
+
+To see some number of the last commits:
+
+```console
+git log -5
+```
+
+To see the last 5 commits.
+
+To see commit from some commit to some other commit: We use the hash value of those commits.
+
+```console
+git log af156ff..32509d0
+```
+
+To see the stat of the commits:
+
+```console
+git log --stat
+```
 
 ## Check out and Detached Head
 
@@ -193,6 +239,14 @@ Merging is to combine the commit history of two branches in a unified history an
 git merge <branch-name>
 ```
 
+To change the name of the branch, HEAD is currently pointing to:
+
+`git branch -m newBranchName`
+
+To change the name of the branch irrespective of HEAD:
+
+`git branch -m oldName newName`
+
 Delete the branch when work is complete.
 
 ```terminal
@@ -215,8 +269,7 @@ git branch -a
 
 ### With SSH
 
-In order to start working with GitHub, you need to register on it. It is better to use SSH key authen-
-tication to work safely with GitHub.
+In order to start working with GitHub, you need to register on it. It is better to use SSH key authentication to work safely with GitHub.
 
 Generation of a new SSH key (use an e-mail that is linked to GitHub):
 
