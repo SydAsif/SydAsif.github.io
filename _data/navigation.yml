@@ -30,7 +30,9 @@ docs:
         url: /ansible/ansible-inv-yml/                      
       - title: "Ansible Multi version Installation"
         url: /ansible/ansible-python-venv/
-
+      - title: "Ansible YAML Introduction"  
+        url: /ansible/ansible-yml-intro/
+        
   - title: "Linux Networking"
     children:
       - title: "Linux Networking Commands"
