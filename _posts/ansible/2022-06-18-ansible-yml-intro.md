@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Part 07: Ansible YAML Introduction"
+title:  "Part 07: Ansible and YAML"
 date:   2022-06-18 09:55:00 +0500
 categories: ansible
 tags:
@@ -11,36 +11,31 @@ toc_label: "On This Post"
 toc_sticky: true
 ---
 
-## Ansible and YAML
-[YAML](https://yaml.org/) YAML is the abbreviated form of “YAML Ain’t markup language” is a data serialization language which is designed to be human -friendly and works well with other programming languages for everyday tasks.
-
-Yaml is a less complex than XML or JSON and it allows you to provide configuration settings.
+## YAML Introduction
+[YAML](https://yaml.org/) is the abbreviated form of *“YAML Ain’t markup language”* is a data serialization language which is designed to be human-friendly and works well with other programming languages for everyday tasks. YAML is a less complex than XML or JSON and it allows you to provide configuration settings.
 
 ### YAML Basic Rules
 
-- YAML files should end in .yaml or .yml
-- YAML is case sensitive
-- YAML does not allow the use of tabs, spaces are used instead of tabs.
-- '#' is used as comments
-- YAML files are supposed to start with three dashes `---`
+- YAML files should end in .yaml or .yml.
+- YAML is case sensitive.
+- YAML does not allow the use of tabs, 2 spaces are used instead of tabs.
+- Hash `#` is used as comments.
+- YAML files are supposed to start with three dashes `---`.
+- In general, YAML strings don’t have to be quoted, although you can quote them if you prefer.
+- In some scenarios in Ansible, you will need to quote strings. These typically involve the use of `{{ braces }}` for variable substitution.
+- YAML has a native Boolean type and provides you with a wide variety of strings that can be interpreted as true or false, and not case sensitive, `true` or `True` and `false` or `False`.
 
 ### YAML Basic Data Types
 
-1. In general, YAML strings don’t have to be quoted, although you can quote them if you prefer. Even if there are spaces, you don’t need to quote them.
-2. In some scenarios in Ansible, you will need to quote strings. These typically involve the use of {{ braces }} for variable substitution.
-3. YAML has a native Boolean type and provides you with a wide variety of strings that can be interpreted as true or false, and not case sensitive.
+#### key-value Pair
 
-`true` or `True` and `false` or `False`
-
-#### Scalers
-
-Scalers is a single value and a variable, it can be string, integer or bool.
+A single value and a variable, it can be string, integer, float or bool.
 
 ```yml
-max_retry: 100 # int
-database: 'users' #string
-pass: true # bool
-date: 1990-02-06 14:33:22 # ISO 8601 standard
+max_retry: 100            # integer
+database: user            #string
+pass: true                # bool
+date: 1990-02-06 14:33:22 # ISO 8601 standard for time and date
 ```
 
 #### Mapping
@@ -50,7 +45,9 @@ YAML dictionaries are like objects in JSON, dictionaries in Python, or hashes in
 ```yml
 animals:
   name: cat
-  age: 5
+    color: white
+  name: dog
+    color: black
 ```
 
 #### Sequence
@@ -62,45 +59,46 @@ YAML lists are like arrays in JSON and Ruby or lists in Python. Technically, the
 employee:
   - name: Jack
   - name: Syd
-# list
-employee: ["Jack", "Syd"]  
-# complex list
+
+employee: ["Jack", "Syd"]    # list  
+
+# complex list (mapping and sequence)
 employee:
   - name: Jack
     age: 28
   - name: Syd
     age: 34
-# complex list    
+
+# complex list (mapping and sequence)    
 employee:
   - {name: "Jack", age: "22"}
   - {name: "Syd", age: "42"}
 ```
 
-### Line Folding
+### Line Folding and Break
 
-When writing playbooks, you’ll often encounter situations where you’re passing many arguments to a module. You might want to break this up across multiple lines in your file, but you want Ansible to treat the string as if it were a single line.
-
-For example:
+When writing playbooks, you’ll often encounter situations where you’re passing many arguments to a module. You might want to break this up across multiple lines in your file, but you want Ansible to treat the string as if it were a single line, For example:
 
 ```yml
 employee:
   - name: Jack
-    age: 28
-# This is a single line 
-description: > 
-  This is 1st line
-  this is a 2nd line
-  this is a 3rd line
+    age: 28 
+description: >      # This is a single line 
+  This is a 1st line
+  this is a not 2nd line and part of 1st line
+  this is a also part of 1st line.
 ```
 
-You can also do this with YAML by using the ( | ) character. The YAML parser will place line breaks.
+You can also do line breaks with YAML by using the `( | )` character. The YAML parser will place line breaks.
 
 ```yml
-# not a sigle line
-signature: |
+employee:
+  - name: Syd
+    age: 42 
+signature: | # not a single line
   Mike
   Academy
   E-mail - abc@abc  
 ```
 
-See more on [YAML](https://www.tutorialspoint.com/yaml/index.htm)
+[See more on YAML](https://www.tutorialspoint.com/yaml/index.htm)
