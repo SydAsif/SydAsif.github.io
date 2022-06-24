@@ -95,7 +95,7 @@ You can also do line breaks with YAML by using the `( | )` character. The YAML p
 employee:
   - name: Syd
     age: 42 
-signature: | # not a single line
+signature: | # line breaks
   Mike
   Academy
   E-mail - abc@abc  
