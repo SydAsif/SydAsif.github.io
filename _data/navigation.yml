@@ -54,7 +54,7 @@ docs:
         url: /networking/ospf/
       - title: "How to Connect Window Host PC (Win 10) with GNS3"
         url: /networking/connect-host-pc-with-gns3/  
-      - title: "How to enable legacy SSH Algorithm and Cipher"
+      - title: "SSH: Unable to Negotiate Error"
         url: /networking/legacy-ssh-algorithm/
       - title: "Getting Started with Vagrant"
         url: /networking/vagrant/
