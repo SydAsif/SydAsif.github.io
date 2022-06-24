@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "How to enable legacy SSH Algorithm and Cipher"
+title:  "SSH: Unable to Negotiate Error"
 date:   2021-09-23 11:50:00 +0500
 categories: networking
 tags: 
@@ -49,4 +49,4 @@ Host 9.9.9.11
  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
 ```
 
-We can use this method for other algorithms and ciphers also in any OS.
+We can use this method for any other [algorithms and ciphers](https://www.infosecmatter.com/solution-for-ssh-unable-to-negotiate-errors/) in any OS.
