@@ -12,7 +12,7 @@ toc_sticky: true
 ---
 
 ## Ansible and YAML
-[YMAL](https://yaml.org/) YAML is the abbreviated form of “YAML Ain’t markup language” is a data serialization language which is designed to be human -friendly and works well with other programming languages for everyday tasks.
+[YAML](https://yaml.org/) YAML is the abbreviated form of “YAML Ain’t markup language” is a data serialization language which is designed to be human -friendly and works well with other programming languages for everyday tasks.
 
 Yaml is a less complex than XML or JSON and it allows you to provide configuration settings.
 
