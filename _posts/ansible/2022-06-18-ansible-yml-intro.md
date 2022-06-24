@@ -21,7 +21,7 @@ Yaml is a less complex than XML or JSON and it allows you to provide configurati
 - YAML files should end in .yaml or .yml
 - YAML is case sensitive
 - YAML does not allow the use of tabs, spaces are used instead of tabs.
-- '#' is uesd as comments
+- '#' is used as comments
 - YAML files are supposed to start with three dashes `---`
 
 ### YAML Basic Data Types
