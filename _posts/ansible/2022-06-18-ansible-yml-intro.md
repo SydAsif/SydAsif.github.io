@@ -22,7 +22,7 @@ toc_sticky: true
 - Hash `#` is used as comments.
 - YAML files are supposed to start with three dashes `---`.
 - In general, YAML strings don’t have to be quoted, although you can quote them if you prefer.
-- In some scenarios in Ansible, you will need to quote strings. These typically involve the use of `{{ braces }}` for variable substitution.
+- In some scenarios in Ansible, you will need to quote strings. These typically involve the use of `double curly braces` for variable substitution.
 - YAML has a native Boolean type and provides you with a wide variety of strings that can be interpreted as true or false, and not case sensitive, `true` or `True` and `false` or `False`.
 
 ### YAML Basic Data Types
