@@ -49,4 +49,4 @@ Host 9.9.9.11
  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
 ```
 
-We can use this method for any other [algorithms and ciphers](https://www.infosecmatter.com/solution-for-ssh-unable-to-negotiate-errors/) in any OS.
+You can use check this **blog** for any other [algorithms and ciphers](https://www.infosecmatter.com/solution-for-ssh-unable-to-negotiate-errors/) in any OS.
