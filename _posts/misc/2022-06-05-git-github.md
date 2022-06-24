@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Git and GitHub Getting Started"
+title:  "Getting Started with Git and GitHub"
 date:   2022-06-05 15:02:15 +0500
 categories: misc
 tag: git
