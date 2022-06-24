@@ -32,6 +32,8 @@ docs:
         url: /ansible/ansible-python-venv/
       - title: "Ansible YAML Introduction"  
         url: /ansible/ansible-yml-intro/
+      - title: "Ansible and ansible-vault"  
+        url: /ansible/ansible-ansible-vault/
         
   - title: "Linux Networking"
     children:
