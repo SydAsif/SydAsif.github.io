@@ -187,14 +187,14 @@ print(tn.read_all().decode('ascii'))
 Python code to configure _ssh_ using _for loop_ on S1 and R1.
 
 ```python
-import getpass
 import telnetlib
+import getpass
 
-user = input("Welcome, if authorized \nPlease enter your telnet Username: ")
+user = input("Welcome, if authorized... \nPlease enter your telnet Username: ")
 password = getpass.getpass()
 
 # for loop
-for IP in range (10,12): 
+for IP in range (10,12):
     HOST = "192.168.10." + str(IP)
     print ('configuration of 192.168.10.' + str(IP))
     
@@ -213,6 +213,10 @@ for IP in range (10,12):
     tn.write(b"end\n")
     tn.write(b"write memory\n")
     tn.write(b"exit\n")
+    print(tn.read_all().decode("ascii"))
+print() # add blank line
+print("Done")
+print()
 ```
 
 > More script at [GitHub](https://github.com/sydasif/network-automation/tree/master/telnet)
