@@ -208,6 +208,16 @@ The syntax of `dir()` method is `dir('object')`.
 >>> 
 ```
 
+## [pydoc](https://docs.python.org/3/library/pydoc.html#module-pydoc) — Documentation generator and online help
+
+The pydoc module automatically generates documentation from Python modules. The documentation can be presented as pages of text on the console, served to a web browser, or saved to HTML files.
+
+The built-in function help() invokes the online help system in the interactive interpreter, which uses pydoc to generate its documentation as text on the console. The same text documentation can also be viewed from outside the Python interpreter by running pydoc as a script at the operating system’s command prompt. For example, running
+
+`pydoc sys`
+
+at a shell prompt will display documentation on the sys module, in a style similar to the manual pages shown by the Unix man command.
+
 [PythonIDE](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
 
 [PythonEditor](https://wiki.python.org/moin/PythonEditors)
