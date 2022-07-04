@@ -82,8 +82,9 @@ docs:
         url: /python/paramiko/     
       - title: "Network Automation with Netmiko"
         url: /python/netmiko/  
+      - title: "Network Automation with Napalm"
+        url: /python/napalm/
 
-             
   - title: "Miscellaneous"
     children:
       - title: "Getting Started with Git and GitHub"
