@@ -70,7 +70,9 @@ docs:
       - title: "Python List"
         url: /python/python-list/
       - title: "Python Reading and Writing Files"
-        url: /python/python-read-file/     
+        url: /python/python-read-file/
+      - title: "How to use python-dotenv"
+        url: /python/python-dot-env/       
 
   - title: "Python Automation"
     children:
