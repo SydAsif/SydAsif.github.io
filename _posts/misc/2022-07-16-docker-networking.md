@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Docker for Networking | Part 01"
-date:   2021-07-16 11:02:15 +0500
+date:   2022-07-16 11:02:15 +0500
 categories: docker
 tags: 
   - python
