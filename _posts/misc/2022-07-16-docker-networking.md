@@ -155,9 +155,9 @@ print(output)
 root@daf6ab851974:/home# 
 ```
 
-The command above connects us to a bash shell at /home inside the container. In this environment, all the tools that were installed during the build process are available to us. To leave the container type _exit_ command will disconnect and shut the container.
+The command above connects us to a bash shell at /home inside the container. In this environment, all the tools that were installed during the build process are available to us. To leave the container type _exit_ command will disconnect and shutdown the container.
 
-We can connect to the container by using this command:
+We can connect to the container again by using this command:
 
 ```console
 $ docker start netmiko
@@ -172,4 +172,4 @@ exit
 
 We, now know some basics about working with Docker. You should also have a functional container that’s usable for your network automation projects. However, needing to connect to the shell of the container might not be the most practical way to run.
 
-In the next post, we will show how to connect our container with a network and run the netmiko script.
+In the next post, we will show you how to connect our container with a network in GNS3 and run the netmiko script.
