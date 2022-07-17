@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Docker for Networking | Part 01"
+title:  "Part 01: Docker for Networking"
 date:   2022-07-16 11:02:15 +0500
 categories: docker
 tags: 
@@ -11,16 +11,18 @@ toc_label: "On This Post"
 toc_sticky: true
 ---
 
-## A Docker Network Automation Container
+## Docker Network Automation Container
 It was far easier to learn how to use Docker than to dive into all the details of an application. Using Docker allows you to leverage pre-built, ready-to-use container images. If an application consists of multiple components (i.e. a database, a front-end and a back-end) you can deploy multiple containers and link them.
 
 The subject of this post is building custom containers to leverage some network automation tools like Nornir, Ansible, and Netmiko. Because a lot of these tools are built on Python and meant to run in a Linux environment, you can get into dependency hell very quickly. By isolating your tools in a container, this problem can be circumvented.
 
 The procedure as described in this post was tested using a Ubuntu 20.04 VM. I’ve prepared this VM with an installation of Docker Community Edition. The instructions can be found [here](https://github.com/sydasif/docker-for-networking#docker-for-networking) to build a working Docker environment.
 
+## Build Your own container
+
 It is also possible to build your own container. You can use containers from Docker Hub as a base for your own container. The following example will extend a Docker Python image. To start, make a fresh directory and place two empty files with the following names in it:
 
-```con
+```console
 $ tree
 .
 ├── app.py
@@ -51,9 +53,11 @@ output = net_connect.send_command("show ip int br")
 print(output)
 ```
 
+### Dockerfile
+
 You can of course add any script you want. Next, we need to write the Dockerfile. The Dockerfile should contain the actual build instructions. My Dockerfile looks like this:
 
-```docker
+```py
 ### -------------------------------------------------
 # Use an official Python runtime as a parent image
 ### -------------------------------------------------
@@ -96,9 +100,11 @@ Let’s walk through the Dockerfile:
 5. The “COPY” statement copies the contents of the current directory on the host system to the specified directory in the Docker container.
 6. If there is two "WORKDIR" statement in the script, the default directory you start in will be the last WORKDIR in your Dockerfile.
 
+### Docker build procedure
+
 Now the only thing left to do is to build the image. In this case, the command syntax is the following:
 
-```con
+```console
 $ docker build -f ./Dockerfile -t automation .
 Sending build context to Docker daemon   5.12kB
 Step 1/7 : FROM python:slim-bullseye
@@ -115,7 +121,7 @@ Removing intermediate container 7ee29428c026
 
 The “docker build” part is self-explanatory. After that, we have to reference the Dockerfile we’ve created. The “-t automation” part sets the image name. The dot at the end is mandatory because “docker build” expects a path. In this case, the command is run straight from the folder containing the Dockerfile, so we can just add a dot. When we run this command, Docker will first grab the Python base image from Docker Hub. This image is then started as a new container, in which the instructions from the Dockerfile are performed. After these instructions, the Python container now holds the changes and will be saved as a new image, ready for use. When the build command finishes, you should have both the Python image and your new custom image in the local repo:
 
-```con
+```console
 $ docker image ls
 REPOSITORY   TAG             IMAGE ID       CREATED         SIZE
 automation   latest          828154ade6ae   6 seconds ago   199MB
@@ -124,7 +130,7 @@ python       slim-bullseye   ba94a8d11761   3 days ago      125MB
 
 We can connect to the container by using this command:
 
-```con
+```console
 $ docker run --name netmiko -it automation bash
 root@daf6ab851974:/home# ls
 app.py
@@ -153,12 +159,12 @@ The command above connects us to a bash shell at /home inside the container. In 
 
 We can connect to the container by using this command:
 
-```con
+```console
 $ docker start netmiko
 netmiko
 ```
 
-```con
+```console
 $ docker exec -it netmiko /bin/bash                                             
 root@daf6ab851974:/home# exit
 exit
