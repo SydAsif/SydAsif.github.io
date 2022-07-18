@@ -3,8 +3,6 @@
 main:
   - title: "Home"
     url: /
-  - title: "GitHub"
-    url: https://github.com/sydasif
   - title: "Categories"
     url: /categories/  
   - title: "Tags"
