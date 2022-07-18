@@ -95,5 +95,7 @@ docs:
         url: /misc/vim-guide/
       - title: "Vim setting for Python and YAML"
         url: /misc/vim-for-python-and-yaml/
-      - title: "Docker for Networking | Part 01"
+      - title: "Part 01: Docker for Networking"
+        url: /misc/docker-introduction/ 
+      - title: "Part 02: Docker for Networking"
         url: /misc/docker-networking/
