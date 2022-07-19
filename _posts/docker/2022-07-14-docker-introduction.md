@@ -2,9 +2,8 @@
 layout: single
 title:  "Part 01: Docker for Networking"
 date:   2022-07-14 11:02:15 +0500
-categories: misc
+categories: docker
 tags: 
-  - docker
   - automation
 toc: true
 toc_label: "On This Post"

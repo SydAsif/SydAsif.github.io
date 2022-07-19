@@ -2,9 +2,8 @@
 layout: single
 title:  "Part 02: Docker for Networking"
 date:   2022-07-16 11:02:15 +0500
-categories: misc
+categories: docker
 tags:
-  - docker
   - python
   - automation
 toc: true
