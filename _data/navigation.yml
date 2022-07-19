@@ -72,7 +72,9 @@ docs:
       - title: "Python Reading and Writing Files"
         url: /python/python-read-file/
       - title: "How to use python-dotenv"
-        url: /python/python-dot-env/       
+        url: /python/python-dot-env/
+      - title: "Python Dictionary"
+        url: /python/python-dict/         
 
   - title: "Python Automation"
     children:
