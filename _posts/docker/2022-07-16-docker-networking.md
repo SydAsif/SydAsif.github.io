@@ -171,5 +171,3 @@ exit
 ```
 
 We, now know some basics about working with Docker. You should also have a functional container that’s usable for your network automation projects. However, needing to connect to the shell of the container might not be the most practical way to run.
-
-In the next post, we will show you how to connect our container with a network in GNS3 and run the netmiko script.
