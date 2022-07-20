@@ -89,6 +89,15 @@ docs:
       - title: "Network Automation with Napalm"
         url: /python/napalm/
 
+  - title: "Docker for Network Automation"
+    children:
+      - title: "Part 01: Docker for Networking"
+        url: /docker/docker-introduction/ 
+      - title: "Part 02: Docker for Networking"
+        url: /docker/docker-networking/ 
+      - title: "Part 03: Docker for Networking"
+        url: /docker/docker-networking-lab/
+  
   - title: "Miscellaneous"
     children:
       - title: "Getting Started with Git and GitHub"
@@ -97,7 +106,3 @@ docs:
         url: /misc/vim-guide/
       - title: "Vim setting for Python and YAML"
         url: /misc/vim-for-python-and-yaml/
-      - title: "Part 01: Docker for Networking"
-        url: /docker/docker-introduction/ 
-      - title: "Part 02: Docker for Networking"
-        url: /docker/docker-networking/
