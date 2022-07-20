@@ -97,7 +97,9 @@ docs:
         url: /docker/docker-networking/ 
       - title: "Part 03: Docker for Networking"
         url: /docker/docker-networking-lab/
-  
+      - title: "Part 04: Docker for Networking"
+        url: /docker/gns3-docker-lab/
+
   - title: "Miscellaneous"
     children:
       - title: "Getting Started with Git and GitHub"
