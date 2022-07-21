@@ -94,9 +94,9 @@ docs:
       - title: "Part 01: What is Docker?"
         url: /docker/docker-introduction/ 
       - title: "Part 02: Docker networking  overview"
-        url: /docker/docker-networking/ 
+        url: /docker/docker-networking-lab/ 
       - title: "Part 03: Automation with Docker"
-        url: /docker/docker-networking-lab/
+        url: /docker/docker-automation-lab/
 
   - title: "Miscellaneous"
     children:
