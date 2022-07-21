@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Part 01: Docker for Networking"
+title:  "Part 01: Docker for Network Automation"
 date:   2022-07-14 11:02:15 +0500
 categories: docker
 tags: 
@@ -10,11 +10,7 @@ toc_label: "On This Post"
 toc_sticky: true
 ---
 
-## Docker for Network Automation
-As network engineers, we have seen the shift from physical hardware to virtual machines. Docker is taking the concept of virtual machines a step further and making it even better.
-
-### What is Docker?
-
+## What is Docker?
 Docker is software that runs on Linux and Windows. It creates, manages, and can even orchestrate containers. The software is currently built from various tools from the open-source project
 
 ### The Docker technology
