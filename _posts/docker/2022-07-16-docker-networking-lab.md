@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "Part 03: Docker for Networking"
-date:   2022-07-19 07:54:00 +0500
+title:  "Part 02: Docker for Network Automation"
+date:   2022-07-16 07:54:00 +0500
 categories: docker
 tags:
   - python
@@ -16,7 +16,7 @@ In Docker networking, we will learn some basic concepts and prepares you to desi
 
 ### [Networking overview](https://docs.docker.com/network/)
 
-One of the reasons Docker containers and services are so powerful is that you can connect them together, or connect them to non-Docker enviroment. Docker containers and services do not even need to be aware that they are deployed on Docker, or whether their peers are also Docker workloads or not. Whether your Docker hosts run Linux, Windows, you can use Docker to manage them.
+One of the reasons Docker containers and services are so powerful is that you can connect them together, or connect them to non-Docker environment. Docker containers and services do not even need to be aware that they are deployed on Docker, or whether their peers are also Docker workloads or not. Whether your Docker hosts run Linux, Windows, you can use Docker to manage them.
 
 ### Network drivers
 

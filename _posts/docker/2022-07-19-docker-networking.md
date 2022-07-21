@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "Part 02: Docker for Networking"
-date:   2022-07-16 11:02:15 +0500
+title:  "Part 03: Docker for Network Automation"
+date:   2022-07-19 11:02:15 +0500
 categories: docker
 tags:
   - python
@@ -11,14 +11,14 @@ toc_label: "On This Post"
 toc_sticky: true
 ---
 
-## Docker Network Automation Container
+## Automation with Docker
 It was far easier to learn how to use Docker than to dive into all the details of an application. Using Docker allows you to leverage pre-built, ready-to-use container images. If an application consists of multiple components (i.e. a database, a front-end and a back-end) you can deploy multiple containers and link them.
 
 The subject of this post is building custom containers to leverage some network automation tools like Nornir, Ansible, and Netmiko. Because a lot of these tools are built on Python and meant to run in a Linux environment, you can get into dependency hell very quickly. By isolating your tools in a container, this problem can be circumvented.
 
-The procedure as described in this post was tested using a Ubuntu 20.04 VM. I’ve prepared this VM with an installation of Docker Community Edition. The instructions can be found [here](https://github.com/sydasif/docker-for-networking#docker-for-networking) to build a working Docker environment.
+The instructions to build a working Docker environment can be found [here](https://sydasif.github.io/docker/docker-introduction/)..
 
-## Build Your own container
+### Build Your Automation Container
 
 It is also possible to build your own container. You can use containers from Docker Hub as a base for your own container. The following example will extend a Docker Python image. To start, make a fresh directory and place two empty files with the following names in it:
 
@@ -171,3 +171,104 @@ exit
 ```
 
 We, now know some basics about working with Docker. You should also have a functional container that’s usable for your network automation projects. However, needing to connect to the shell of the container might not be the most practical way to run.
+
+## Automation lab With Docker
+
+In this section, we will connect our container to a network in GNS3 to test our created docker container but first we will create our lab in GNS3.
+
+### Lab Setup
+
+We will create simple network topology in GNS3 as below:
+
+![LAb TOPOLOGY](/assets/images/docker.png)
+
+1. Open GNS3 and add a cisco router and switch.
+2. Add cloud to your topology, but make sure to chose your host server, not GNS3VM as below:
+
+![PIC](/assets/images/ubuntu.png)
+
+After that, double click on cloud node to configure docker0 interface:
+
+![PIC](/assets/images/docker0.png)
+
+In above configuration tab check _show special ethernet interface_, select docker0 from dropdown menu click add, apply and ok.
+
+#### Router configuration
+
+Configure router as below:
+
+```console
+conf t
+!
+hostname R1
+!
+enable secret 5 $1$NS47$q9v1kBxcavk6vCzCGNmTH1
+!
+no ip domain lookup
+ip domain name tech.com        
+!
+username admin privilege 15 password 0 cisco
+!
+interface FastEthernet0/0
+ ip address 172.17.0.10 255.255.0.0
+ duplex auto
+ speed auto
+!
+line vty 0 4
+ logging synchronous
+ login local
+!
+!
+end
+```
+
+We configure router interface in the same subnet as our docker0 bridge at our host machine as below:
+
+```console
+╭─$ ~  
+╰─➤  ip addr show | grep docker0
+docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+```
+
+If you want to learn more about how Docker network is working see [Part-02](https://sydasif.github.io/docker/docker-networking-lab/).
+
+### Testing Python script
+
+In this step we test our already created container to run our script as below:
+
+- Start container.
+
+```console
+╭─$ ~  
+╰─➤  docker start netmiko                 
+netmiko
+```
+
+- Run Python script.
+
+```console
+╭─$ ~  
+╰─➤  docker exec -it netmiko python app.py
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            172.17.0.10     YES NVRAM  up                    up      
+FastEthernet0/1            unassigned      YES NVRAM  administratively down down 
+```
+
+- stop the container.
+
+```console
+╭─$ ~  
+╰─➤  docker stop netmiko                  
+netmiko
+```
+
+- remove the containers.
+
+```console
+╭─syd@ubuntu ~  
+╰─➤  docker rm netmiko 
+netmiko
+```
+
+That's it, we run our script successfully in lab environment.

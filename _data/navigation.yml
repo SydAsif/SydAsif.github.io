@@ -91,14 +91,12 @@ docs:
 
   - title: "Docker for Network Automation"
     children:
-      - title: "Part 01: Docker for Networking"
+      - title: "Part 01: What is Docker?"
         url: /docker/docker-introduction/ 
-      - title: "Part 02: Docker for Networking"
+      - title: "Part 02: Docker networking  overview"
         url: /docker/docker-networking/ 
-      - title: "Part 03: Docker for Networking"
+      - title: "Part 03: Automation with Docker"
         url: /docker/docker-networking-lab/
-      - title: "Part 04: Docker for Networking"
-        url: /docker/gns3-docker-lab/
 
   - title: "Miscellaneous"
     children:
