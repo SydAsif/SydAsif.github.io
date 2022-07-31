@@ -1,3 +1,1 @@
-# Personal blog
-
-My Blog
+# My Personal blog at github
