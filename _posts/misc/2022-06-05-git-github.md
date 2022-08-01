@@ -43,12 +43,22 @@ sudo apt install git
 
 ### Configuring Git
 
-To start working with Git you need to specify the user name and e-mail that will be used to synchronize
-the local repository with your GitHub repository:
+To start working with Git you need to specify the user name and e-mail that will be used to synchronize the local repository with your GitHub repository:
 
 ```console
 git config --global user.name “userName”
 git config --global user.email “userEmail@gmail.com”
+git config --global core.editor "vim"
+```
+
+or use `git config --global --edit` will open _.gitconfig_ file in your text editor.
+
+```vim
+  1 [user]
+  2         name = “userName”
+  3         email = “userEail@gmail.com”
+  4 [core]
+  5         editor = vim
 ```
 
 To check your Git setting use the command:
@@ -57,29 +67,40 @@ To check your Git setting use the command:
 git config --list
 ```
 
+or
+
+```console
+git config --global --list
+```
+
 ### Initializing Repository
 
-There are two ways to initialize a repository, the first one is to clone an existing repository from a server (GitHub) to your local machine.
+There are two ways to initialize a repository:
 
-The second is to create a new repository on your machine locally.
+- The first one is to clone an existing repository from a server to your local machine.
+- The second is to create a new repository on your machine locally.
 
 ## Fundamentals of Git
 
-Git maintains three file systems also known as git structures or trees.
+Git has maintains a file systems also known as git structures or trees as below:
 
-### Working directory / local workspace
+- ### Working directory / local workspace
 
 Starting with the working area, the working area is where the files that are not handled by git, it is the place where all the untracked files are kept.
 
-### Staging area / index
+- ### Staging area / index
 
-Staging area has files that are going to be part of the next commit.
+Staging area has files that are add by `git add` command, going to be part of the next commit.
 
-### Local repository
+- ### Local repository
 
 The repository contains all the project and store all committed items.
 
-### Staging and Committing
+- ### Remote repository
+
+The remote repository contains your copy of local repo on a server.
+
+## Staging and Committing
 
 Files in Git follow a life cycle as below:
 
@@ -96,7 +117,7 @@ Git has the option to specify which ﬁle or directories to ignore. To do this, 
 
 ### git init
 
-Initialize a new local git repository. A new file created is by default untracked.
+Initialize a new local git repository inside a directory with `git init` or use `git init <name_of_dir>` will create a directory and also initialize a repository.
 
 ### git add
 
@@ -121,8 +142,10 @@ check the status of a working directory from git’s perspective.
 After all necessary ﬁles have been added to a staging area, you can commit changes. Staging is a collection of ﬁles that will be added to the next commit.
 
 ```console
-git commit -m "your commit msg" 
+git commit -m "your commit message" 
 ```
+
+or use `git commit` to open a text editor for commit message.
 
 ### git show
 
@@ -146,11 +169,7 @@ rename a git tracked file
 
 Command _git diff_ allows you to see the difference between different states in the working area. Command _git diff_ shows what changes have been made since the last commit. If you add changes made to the staging area via _git add_ command and run _git diff_ again, it will show nothing.
 
-```console
-git diff
-```
-
-The `git diff` command is to see the difference between different commits.
+Use the `git diff` to see the difference between two commits.
 
 ```console
 git diff 1c16945..9dcff6
@@ -164,8 +183,9 @@ git diff --staged
 
 ### Repository History
 
-- The _git log_ command shows a history of the repository in descending order, with the last commit we made at the top.
-- The _git log_ command displays a brief description of a repository, it includes the change, date and time, who made the changes, commit message and commit identifier (hash value).
+- The _git log_ command shows a history of the repository in descending order.
+- The _git log_ command displays a brief description of a repository
+    : it includes the change, date and time, who made the changes, commit message and commit identifier (hash value).
 - You can tidy this history with the _git log --oneline_ command, which shows a clean-cut history.
 
 There are many ways to see commit history :
@@ -176,13 +196,11 @@ Most basic one: Shows all the commits from end to start, with all the info relat
 git log
 ```
 
-To see some number of the last commits:
+To see some number of the last five commits:
 
 ```console
 git log -5
 ```
-
-To see the last 5 commits.
 
 To see commit from some commit to some other commit: We use the hash value of those commits.
 
