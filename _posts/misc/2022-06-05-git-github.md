@@ -259,11 +259,15 @@ git merge <branch-name>
 
 To change the name of the branch, HEAD is currently pointing to:
 
-`git branch -m newBranchName`
+```console
+git branch -m newBranchName
+```
 
 To change the name of the branch irrespective of HEAD:
 
-`git branch -m oldName newName`
+```console
+git branch -m oldName newName
+```
 
 Delete the branch when work is complete.
 
