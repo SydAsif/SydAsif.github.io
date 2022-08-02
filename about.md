@@ -5,7 +5,7 @@ permalink: /about/
 author_profile: true
 ---
 
-Assosiate Engineer (DAE in Electronics), Computer Networking and Network Automation.
+Associate Engineer (DAE in Electronics), Computer Networking and Network Automation.
 My resource for learning as hobby after 25 years of job in networking, maybe it's also interesting and helpful for others.
 
 ## Course's done in covid
