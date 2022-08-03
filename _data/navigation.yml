@@ -58,6 +58,8 @@ docs:
         url: /networking/legacy-ssh-algorithm/
       - title: "Getting Started with Vagrant"
         url: /networking/vagrant/
+      - title: "Vagrant with VMware Workstation"
+        url: /networking/vagrant-vmware/
 
   - title: "Python"
     children:
