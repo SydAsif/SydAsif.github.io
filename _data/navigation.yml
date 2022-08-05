@@ -60,6 +60,8 @@ docs:
         url: /networking/vagrant/
       - title: "Vagrant with VMware Workstation"
         url: /networking/vagrant-vmware/
+      - title: "Ansible Lab setup with Vagrant"
+        url: /networking/vagrant-lab/  
 
   - title: "Python"
     children:
