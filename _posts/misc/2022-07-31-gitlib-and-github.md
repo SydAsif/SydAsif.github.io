@@ -25,7 +25,7 @@ To create private and public SSH pairs for your personal, and work accounts, run
 
 ```console
 ssh-keygen -t rsa -C "personal@mail.com" -f ~/.ssh/id_rsa_github
-ssh-keygen -t rsa -C "personal@mail.com" -f ~/.ssh/id_rsa_gitlib
+ssh-keygen -t rsa -C "personal@mail.com" -f ~/.ssh/id_rsa_gitlab
 ```
 
 The above commands will produce four different files namely as below:
