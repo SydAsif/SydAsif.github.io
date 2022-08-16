@@ -41,6 +41,8 @@ docs:
         url: /linux/linux-networking-cmd/
       - title: "How to Connect Linux Host PC (Ubuntu) with GNS3"
         url: /linux/tap-int-in-linux/
+      - title: "Linux Terminal and Vim: An Integration Guide"
+        url: /linux/linux-terminal/
 
   - title: "Computer Networking"
     children:
