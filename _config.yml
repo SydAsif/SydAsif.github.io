@@ -40,6 +40,12 @@ comments:
   disqus:
     shortname: "syd"
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-207662138-1"
+    anonymize_ip: false # default    
+
 search: true
 
 author:
