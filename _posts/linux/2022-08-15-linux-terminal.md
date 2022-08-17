@@ -193,3 +193,54 @@ python3 del powerline_setup
 ```
 
 No other code is necessary to get the powerline working inside of Vim.
+
+### Setting Vim Color Schemes
+
+Before you try a color scheme, make sure that syntax highlighting is turned on in Vim. That can be done by either saving syntax on in your 'vimrc' or by running :syntax on in an active Vim session.
+
+To temporarily use a color scheme, use one of the following commands from Normal mode.
+
+```console
+:colo <color-scheme-name>
+
+:colors <color-scheme-name>
+
+:colorscheme <color-scheme-name>
+```
+
+You tried a color scheme and want to make it permanent, append the following line in your '.vimrc' file.
+
+`colorscheme <color-scheme-name-here>`
+
+### [Installing third-party color schemes](https://vimcolorschemes.com/)
+
+There are two ways you can install a third-party color scheme.
+
+Either you can use a plugin manager for Vim, or manually clone the repository to the right place.
+
+When you visit the repository hosting color schemes, that repository will always contain a README. Make sure you read it thoroughly.
+
+As mentioned above, most color schemes can be installed by using the plugin manager but some require different commands to install manually. I prefer manual installation, in this section, we will install [Dracula dark theme](https://draculatheme.com/vim) for Vim.
+
+These are the default instructions using Vim 8.2.
+
+- Create the directory structure as below:
+
+`mkdir -p ~/.vim/pack/themes/start`
+
+- Navigate to the start folder above:
+
+- Clone the repository using the "dracula" name:
+
+`git clone https://github.com/dracula/vim.git dracula`
+
+Edit your .vimrc file with the following content:
+
+```console
+syntax on
+packadd! dracula
+set background=dark
+colorscheme dracula
+```
+
+This section covered how you can use the default color schemes and third-party color schemes to enable either one of them.
