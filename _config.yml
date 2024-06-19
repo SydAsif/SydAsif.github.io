@@ -38,7 +38,7 @@ baseurl: ""
 comments:
   provider: "disqus"
   disqus:
-    shortname: "syd"
+    shortname: "syed"
 
 analytics:
   provider: "google-gtag"
